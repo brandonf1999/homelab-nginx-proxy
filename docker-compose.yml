@@ -4,4 +4,7 @@ services:
     build: ./
     ports:
       - "80:80"
+      - "443:443"
     restart: unless-stopped
+    volumes:
+      - ./lets-encrypt:/etc/nginx/ssl
